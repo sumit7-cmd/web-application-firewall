@@ -1,0 +1,1 @@
+web application firewall (WAF) is a security solution that protects web applications by filtering, monitoring, and blocking malicious HTTP traffic between the internet and the application made with flask framework Flask is a micro web framework for Python, designed to facilitate the rapid development of web applications
