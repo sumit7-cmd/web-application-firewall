@@ -1,0 +1,10 @@
+services:
+  waf:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      WAF_RATE_LIMIT: 60
+      WAF_RATE_WINDOW: 60
+      WAF_MAX_BODY_SIZE: 1048576
+    restart: unless-stopped
