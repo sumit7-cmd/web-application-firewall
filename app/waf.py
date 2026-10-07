@@ -1,4 +1,6 @@
 import json
+from urllib.parse import unquote_plus
+
 from flask import request
 
 from .rate_limiter import RateLimiter
@@ -38,6 +40,7 @@ class WAF:
         pieces = [
             request.full_path,
             request.query_string.decode("utf-8", errors="ignore"),
+            unquote_plus(request.query_string.decode("utf-8", errors="ignore")),
             request.headers.get("User-Agent", ""),
         ]
         if request.data:
